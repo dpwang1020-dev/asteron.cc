@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Center Connectivity — ASTERON</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/ao-logo.png" alt="ASTERON" class="logo-img" />
+        <span class="header-tagline">Light. In Motion.</span>
+      </a>
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Solutions</span>
+          <div class="nav-dropdown-menu">
+            <a href="solution-ai-clusters.html">AI Clusters | Data Centers</a>
+            <a href="solution-data-center-connectivity.html">Data Center Connectivity</a>
+            <a href="solution-storage-hpc.html">Storage | Server HPC</a>
+            <a href="solution-wireless-fronthaul.html">Wireless Fronthaul</a>
+            <a href="solution-metro-long-haul.html">Metro Long Haul</a>
+            <a href="solution-fiber-access.html">Fiber to the Home Access</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Sustainable Development</span>
+          <div class="nav-dropdown-menu">
+            <a href="quality-safety.html">Quality &amp; Safety</a>
+            <a href="compliance.html">Compliance Statement</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">About ASTERON</span>
+          <div class="nav-dropdown-menu">
+            <a href="introduction.html">Introduction</a>
+            <a href="news.html">News</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero page-hero">
+      <div class="container hero-inner">
+        <a href="index.html#solutions" class="back-link">← Solutions</a>
+        <h1 class="hero-title">Data Center Connectivity</h1>
+        <p class="hero-desc">400G and 800G ZR and ZR+ pluggable transceivers for data center interconnects (DCIs), providing high-speed, low-power, cost-effective solutions with coherent optical technology and seamless vendor interoperability.</p>
+      </div>
+    </section>
+
+    <section class="product-family">
+      <div class="container">
+        <h2 class="section-title">Product Portfolio</h2>
+        <div class="product-family-block">
+          <h3 class="family-title">800G Family</h3>
+          <div class="family-content">
+            <div class="family-image"><img src="images/products/800g-zr.png" alt="" /></div>
+            <ul class="product-list">
+              <li class="product-item">
+                <span class="product-name">800G QSFP-DD ZR 0 dBm</span>
+                <span class="product-spec">InP engine | Reach: 40Km unamplified, 120Km amplified | Client 8x100GbE | 4x200GE | 1x800GbE | 0 to 75℃ operating temperature | Compliant with OIF-800G ZR MSA standard</span>
+              </li>
+              <li class="product-item">
+                <span class="product-name">800G QSFP-DD ZR+ 0 dBm</span>
+                <span class="product-spec">InP engine | Reach: 120-400 Km+ | Client 100GbE - 400GbE (multirate) | 0 to 75℃ operating temperature | Compliant with 800G ZR+ MSA standard</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-family-block">
+          <h3 class="family-title">400G Family</h3>
+          <div class="family-content">
+            <div class="family-image"><img src="images/products/400g-zr.png" alt="" /></div>
+            <ul class="product-list">
+              <li class="product-item">
+                <span class="product-name">400G QSFP-DD ZR</span>
+                <span class="product-spec">Silicon Photonics engine | Reach: 40Km unamplified, 120Km amplified | Client 400GbE | 0 to 70℃ operating temperature | Compliant with OIF-400ZR-01.0 standard</span>
+              </li>
+              <li class="product-item">
+                <span class="product-name">400G QSFP-DD ZR+</span>
+                <span class="product-spec">Silicon Photonics engine | Reach: 120-4000Km+ | Client 100GbE - 400GbE (multi-rate) | 0 to 70℃ operating temperature | Compliant with Open ZR+ MSA</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-content container">
+      <p>For product details and inquiries, please <a href="contact.html">contact us</a>.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row footer-row-1">
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="solution-ai-clusters.html">Solutions</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <p class="footer-copy">© ASTERON. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-up" aria-label="Scroll Up">Scroll Up</a>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() { document.querySelector('.nav').classList.toggle('open'); });
+    document.querySelectorAll('.nav-dropdown-trigger').forEach(function(t) { t.addEventListener('click', function(e) { if (window.innerWidth <= 900) { e.preventDefault(); this.parentElement.classList.toggle('open'); } }); });
+    document.querySelector('.scroll-up').addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>

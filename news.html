@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — ASTERON</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/ao-logo.png" alt="ASTERON" class="logo-img" />
+        <span class="header-tagline">Light. In Motion.</span>
+      </a>
+      <nav class="nav">
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Solutions</span>
+          <div class="nav-dropdown-menu">
+            <a href="solution-ai-clusters.html">AI Clusters | Data Centers</a>
+            <a href="solution-data-center-connectivity.html">Data Center Connectivity</a>
+            <a href="solution-storage-hpc.html">Storage | Server HPC</a>
+            <a href="solution-wireless-fronthaul.html">Wireless Fronthaul</a>
+            <a href="solution-metro-long-haul.html">Metro Long Haul</a>
+            <a href="solution-fiber-access.html">Fiber to the Home Access</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Sustainable Development</span>
+          <div class="nav-dropdown-menu">
+            <a href="quality-safety.html">Quality &amp; Safety</a>
+            <a href="compliance.html">Compliance Statement</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">About ASTERON</span>
+          <div class="nav-dropdown-menu">
+            <a href="introduction.html">Introduction</a>
+            <a href="news.html">News</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero page-hero">
+      <div class="container hero-inner">
+        <a href="index.html#news" class="back-link">← Home</a>
+        <h1 class="hero-title">Latest News</h1>
+      </div>
+    </section>
+    <section class="page-content container">
+      <article id="news-1" class="news-article">
+        <h3>ASTERON at CIOE 2025 — 1.6T and AI &amp; Cloud Portfolio</h3>
+        <span class="date">2025</span>
+        <p>ASTERON will feature its latest product portfolio addressing AI &amp; Cloud Computing, FTTx/Wireless, Telecom, and Data Center Interconnect (DCI) applications at CIOE 2025, including live demonstrations of its 1.6T portfolio.</p>
+      </article>
+      <article id="news-2" class="news-article">
+        <h3>ASTERON Demonstrates 1.6T and 800G at OFC 2025</h3>
+        <span class="date">2025</span>
+        <p>ASTERON showcased live demonstrations of 1.6T pluggable optical transceivers and next-generation low-power 800G optical transceivers at the Optical Fiber Communication Conference and Exhibition (OFC).</p>
+      </article>
+      <article id="news-3" class="news-article">
+        <h3>ASTERON 400G and 800G Test Platforms</h3>
+        <span class="date">2024</span>
+        <p>ASTERON and partners announced the availability of latest 400G and 800G test platforms for data center and long-haul applications.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row footer-row-1">
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="introduction.html">About ASTERON</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <p class="footer-copy">© ASTERON. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-up" aria-label="Scroll Up">Scroll Up</a>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() { document.querySelector('.nav').classList.toggle('open'); });
+    document.querySelectorAll('.nav-dropdown-trigger').forEach(function(t) { t.addEventListener('click', function(e) { if (window.innerWidth <= 900) { e.preventDefault(); this.parentElement.classList.toggle('open'); } }); });
+    document.querySelector('.scroll-up').addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+</body>
+</html>
