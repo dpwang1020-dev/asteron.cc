@@ -64,6 +64,8 @@
           <input type="text" id="name" name="name" placeholder="Your name" required />
           <label for="email">Email <span class="required">*</span></label>
           <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
           <label for="company">Company (optional)</label>
           <input type="text" id="company" name="company" placeholder="Company name" />
           <label for="message">Message <span class="required">*</span></label>
@@ -75,8 +77,9 @@
         <p>You can also reach us at <a href="mailto:sales@asteron.cc">sales@asteron.cc</a> for product inquiries, technical support, or partnership opportunities.</p>
       </div>
     </section>
+
   </main>
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer-row footer-row-1">
         <div class="footer-nav">
@@ -86,19 +89,7 @@
           <a href="introduction.html">About ASTERON</a>
           <a href="contact.html">Contact Us</a>
         </div>
-        <a href="index.html" class="footer-logo"><img src="images/ao-logo.png" alt="ASTERON" class="logo-img" /></a>
-        <p class="footer-copy">© ASTERON. All Rights Reserved.</p>
-      </div>
-      <div class="footer-row footer-row-2">
-        <div class="footer-nav">
-          <a href="index.html#products">Products</a>
-            <a href="solution-ai-clusters.html">AI Infrastructure</a>
-          <a href="solution-data-center-connectivity.html">Cloud &amp; DCI</a>
-          <a href="solution-storage-hpc.html">Enterprise / HPC Storage</a>
-          <a href="solution-wireless-fronthaul.html">Mobile &amp; Fronthaul</a>
-          <a href="solution-metro-long-haul.html">Metro / Transport Networks</a>
-          <a href="solution-fiber-access.html">Broadband Access</a>
-        </div>
+        <div><a href="index.html" class="footer-logo"><img src="images/ao-logo.png" alt="ASTERON" class="logo-img" /></a></div>
         <p class="footer-copy">Copyright © ASTERON. All Rights Reserved.</p>
       </div>
     </div>
@@ -119,6 +110,7 @@
         e.preventDefault();
         var name = (document.getElementById('name') || {}).value.trim();
         var email = (document.getElementById('email') || {}).value.trim();
+        var phone = (document.getElementById('phone') || {}).value.trim();
         var company = (document.getElementById('company') || {}).value.trim();
         var message = (document.getElementById('message') || {}).value.trim();
 
@@ -139,7 +131,7 @@
         fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: name, email: email, company: company, message: message })
+          body: JSON.stringify({ name: name, email: email, phone: phone, company: company, message: message })
         })
           .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
           .then(function(result) {

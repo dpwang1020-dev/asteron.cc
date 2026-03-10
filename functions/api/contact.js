@@ -38,43 +38,37 @@ export async function onRequestPost(context) {
     });
 
   try {
-    console.log('[api/contact] POST received');
     const { request, env } = context;
     const envSafe = env || {};
-    const hasKey = !!(envSafe.RESEND_API_KEY && String(envSafe.RESEND_API_KEY).trim());
-    console.log('[api/contact] env check: RESEND_API_KEY present=', hasKey);
 
     let body;
     try {
       body = await request.json();
-    } catch (e) {
-      console.error('[api/contact] request.json() failed:', e && e.message);
+    } catch {
       return json({ success: false, error: 'Invalid JSON body' }, 400);
     }
 
     const name = (body.name || '').trim();
     const email = (body.email || '').trim();
+    const phone = (body.phone || '').trim();
     const company = (body.company || '').trim();
     const message = (body.message || '').trim();
-    console.log('[api/contact] body: name=', !!name, 'email=', !!email, 'company=', !!company, 'messageLen=', message.length);
 
     if (!name || !email || !message) {
-      console.log('[api/contact] validation failed: missing required fields');
       return json({ success: false, error: 'Name, email, and message are required' }, 400);
     }
 
     const apiKey = (envSafe.RESEND_API_KEY || '').trim();
     if (!apiKey) {
-      console.error('[api/contact] RESEND_API_KEY is missing or empty');
       return json({ success: false, error: 'Server configuration error' }, 500);
     }
 
-    const fromEmail = (envSafe.RESEND_FROM_EMAIL || 'ASTERON Website <onboarding@resend.dev>').trim();
+    const fromEmail = (envSafe.RESEND_FROM_EMAIL || 'ASTERON Website <noreply@asteron.cc>').trim();
     const subject = `[ASTERON Contact] ${name}${company ? ` (${company})` : ''}`;
-    console.log('[api/contact] calling Resend: from=', fromEmail, 'to=', TO_EMAIL, 'subject=', subject);
     const html = [
       `<p><strong>Name:</strong> ${escapeHtml(name)}</p>`,
       `<p><strong>Email:</strong> ${escapeHtml(email)}</p>`,
+      phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : '',
       company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : '',
       '<p><strong>Message:</strong></p>',
       `<p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`,
@@ -98,25 +92,19 @@ export async function onRequestPost(context) {
     try {
       const text = await res.text();
       if (text) data = JSON.parse(text);
-    } catch (e) {
-      console.error('[api/contact] Resend response parse failed:', e && e.message);
+    } catch {
       data = { message: res.statusText || 'Unknown error' };
     }
 
-    console.log('[api/contact] Resend response: status=', res.status, 'data=', JSON.stringify(data));
-
     if (!res.ok) {
-      console.error('[api/contact] Resend error:', res.status, data);
       return json({
         success: false,
         error: data.message || data.error || (typeof data === 'string' ? data : 'Failed to send email'),
       }, 502);
     }
 
-    console.log('[api/contact] email sent successfully');
     return json({ success: true });
-  } catch (err) {
-    console.error('[api/contact] Uncaught error:', err && err.message, err && err.stack);
+  } catch {
     return json(
       { success: false, error: 'An unexpected error occurred. Please try again later.' },
       500
