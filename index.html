@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASTERON — Optical Solutions for AI &amp; Data Center</title>
-  <meta name="description" content="ASTERON is a leading global manufacturer of active optical communication devices and modules for AI clouds and data centers." />
+  <title>ASTERON — Optical Interconnects for AI, Data Centers and Carrier Networks</title>
+  <meta name="description" content="ASTERON is a U.S.-based optical interconnect brand delivering high-speed connectivity solutions through a qualified global supply chain, focused on North American customers." />
   <!-- Font: Apple-style system stack (SF Pro / Segoe UI / Roboto) -->
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles/common.css" />
 </head>
 <body>
   <header class="header">
@@ -19,26 +20,31 @@
         <div class="nav-dropdown">
           <span class="nav-dropdown-trigger">Solutions</span>
           <div class="nav-dropdown-menu">
-            <a href="solution-ai-clusters.html">AI Clusters | Data Centers</a>
-            <a href="solution-data-center-connectivity.html">Data Center Connectivity</a>
-            <a href="solution-storage-hpc.html">Storage | Server HPC</a>
-            <a href="solution-wireless-fronthaul.html">Wireless Fronthaul</a>
-            <a href="solution-metro-long-haul.html">Metro Long Haul</a>
-            <a href="solution-fiber-access.html">Fiber to the Home Access</a>
+            <a href="solution-ai-clusters.html">AI Infrastructure</a>
+            <a href="solution-data-center-connectivity.html">Cloud &amp; DCI</a>
+            <a href="solution-storage-hpc.html">Enterprise / HPC Storage</a>
+            <a href="solution-wireless-fronthaul.html">Mobile &amp; Fronthaul</a>
+            <a href="solution-metro-long-haul.html">Metro / Transport Networks</a>
+            <a href="solution-fiber-access.html">Broadband Access</a>
           </div>
         </div>
         <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Sustainable Development</span>
+          <span class="nav-dropdown-trigger">Products</span>
           <div class="nav-dropdown-menu">
-            <a href="quality-safety.html">Quality &amp; Safety</a>
-            <a href="compliance.html">Compliance Statement</a>
+            <a href="category-1-6t.html">1.6T Roadmap</a>
+            <a href="category-800g-pluggables.html">800G Pluggables</a>
+            <a href="category-400g-pluggables.html">400G Pluggables</a>
+            <a href="category-coherent-zr.html">Coherent / ZR / ZR+</a>
+            <a href="category-aoc-dac.html">AOC / DAC</a>
+            <a href="category-access-optics.html">Access Optics</a>
           </div>
         </div>
+        <a href="quality-compliance.html">Quality &amp; Compliance</a>
         <div class="nav-dropdown">
           <span class="nav-dropdown-trigger">About ASTERON</span>
           <div class="nav-dropdown-menu">
             <a href="introduction.html">Introduction</a>
-            <a href="news.html">News</a>
+            <a href="partner-ecosystem.html">Partner Ecosystem</a>
           </div>
         </div>
         <a href="contact.html">Contact Us</a>
@@ -48,50 +54,53 @@
   </header>
 
   <main>
-    <!-- Carousel (LIGENT-style hero banners) -->
-    <section class="carousel" aria-label="Hero carousel">
-      <div class="carousel-inner">
-        <div class="carousel-track">
-          <div class="carousel-slide carousel-slide-active" data-index="0" style="background-image: url('images/carousel/banner1.png');">
-            <a href="introduction.html" class="carousel-slide-link">
-              <div class="container carousel-caption">
-                <h2 class="carousel-title">Light Intelligence</h2>
+    <!-- Hero: Bootstrap 5 Carousel -->
+    <section class="hero hero-home hero-carousel" aria-label="Hero carousel">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero-slide-bg" style="background-image: url('images/carousel/banner1.png');"></div>
+            <div class="hero-slide-overlay"></div>
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+              <div class="container hero-inner">
+                <h1 class="hero-title">Optical Interconnects for AI, Data Centers and Carrier Networks</h1>
+                <p class="hero-subtitle">ASTERON is a U.S.-based optical interconnect brand delivering high-speed connectivity solutions through a qualified global supply chain, focused on North American customers.</p>
+                <div class="hero-cta">
+                  <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
+                  <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
-          <div class="carousel-slide" data-index="1" style="background-image: url('images/carousel/banner2.png');">
-            <a href="solution-ai-clusters.html" class="carousel-slide-link">
-              <div class="container carousel-caption">
-                <h2 class="carousel-title">AI &amp; Data Center Solutions</h2>
+          <div class="carousel-item">
+            <div class="hero-slide-bg" style="background-image: url('images/carousel/banner2.png');"></div>
+            <div class="hero-slide-overlay"></div>
+            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+              <div class="container hero-inner">
+                <h2 class="hero-slide-title">Built for Next-Generation Optical Connectivity</h2>
+                <p class="hero-slide-desc">ASTERON serves the evolving needs of AI infrastructure, cloud data centers, telecom networks, system integrators, and networking vendors. By combining North America-focused market understanding with qualified manufacturing and technology partners across Asia, we deliver practical, scalable, and commercially flexible optical solutions.</p>
+                <div class="hero-cta">
+                  <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
+                  <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
+                </div>
               </div>
-            </a>
-          </div>
-          <div class="carousel-slide" data-index="2" style="background-image: url('images/carousel/banner3.png');">
-            <a href="solution-data-center-connectivity.html" class="carousel-slide-link">
-              <div class="container carousel-caption">
-                <h2 class="carousel-title">Data Center Connectivity</h2>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="carousel-dots" aria-hidden="true">
-        <button type="button" class="carousel-dot carousel-dot-active" aria-label="Slide 1" data-index="0"></button>
-        <button type="button" class="carousel-dot" aria-label="Slide 2" data-index="1"></button>
-        <button type="button" class="carousel-dot" aria-label="Slide 3" data-index="2"></button>
-      </div>
-      <button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide">‹</button>
-      <button type="button" class="carousel-btn carousel-next" aria-label="Next slide">›</button>
-    </section>
-
-    <section class="about-blurb">
-      <div class="container">
-        <h2 class="section-title">About ASTERON</h2>
-        <p class="section-desc">ASTERON is a leading global manufacturer of active optical communication devices and modules. With extensive expertise in manufacturing and robust R&amp;D capabilities, we drive innovation and deliver exceptional value to our customers. Our solutions are specifically designed for AI clouds and data centers.</p>
-        <a href="introduction.html" class="btn btn-secondary">Learn more</a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     </section>
 
+    <!-- Solutions -->
     <section id="solutions" class="solutions">
       <div class="container">
         <h2 class="section-title">Solutions</h2>
@@ -99,48 +108,48 @@
           <a href="solution-ai-clusters.html" class="solution-card">
             <div class="card-visual card-visual-1"></div>
             <div class="card-content">
-              <h3>AI Clusters | Data Centers</h3>
-              <p>400G, 800G, and 1.6T pluggable transceivers for scalable, high-bandwidth optical interconnects—essential for Generative AI and data center workloads.</p>
+              <h3>AI Infrastructure</h3>
+              <p>High-speed pluggable optics for GPU fabrics, AI clusters, and hyperscale compute environments, with a focus on bandwidth density, thermal performance, and interoperability.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
           <a href="solution-data-center-connectivity.html" class="solution-card">
             <div class="card-visual card-visual-2"></div>
             <div class="card-content">
-              <h3>Data Center Connectivity</h3>
-              <p>400G and 800G ZR and ZR+ pluggable transceivers for data center interconnects (DCIs) with coherent optical technology.</p>
+              <h3>Cloud &amp; DCI</h3>
+              <p>Optical interconnect solutions for data center fabrics and inter-site connectivity, including high-speed pluggables and coherent-ready pathways for cloud-scale deployments.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
           <a href="solution-storage-hpc.html" class="solution-card">
             <div class="card-visual card-visual-3"></div>
             <div class="card-content">
-              <h3>Storage | Server HPC</h3>
-              <p>Fiber Channel and HPC pluggables for storage networks and high-performance computing environments.</p>
+              <h3>Enterprise / HPC Storage</h3>
+              <p>Reliable optical connectivity for storage networks, enterprise systems, and high-performance computing environments where stability and throughput matter most.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
           <a href="solution-wireless-fronthaul.html" class="solution-card">
             <div class="card-visual card-visual-4"></div>
             <div class="card-content">
-              <h3>Wireless Fronthaul</h3>
-              <p>Optical modules for 4G, 5G, and 5G-A mobile networks—gray light, BiDi, and colored light solutions from 10G to 50G.</p>
+              <h3>Mobile &amp; Fronthaul</h3>
+              <p>Optical solutions supporting mobile transport and fronthaul architectures, optimized for network evolution, deployment flexibility, and operational efficiency.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
           <a href="solution-metro-long-haul.html" class="solution-card">
             <div class="card-visual card-visual-5"></div>
             <div class="card-content">
-              <h3>Metro Long Haul</h3>
-              <p>800G, 400G, 200G, and 100G Long Reach and BiDi transceivers for metro and long-haul transport networks.</p>
+              <h3>Metro / Transport Networks</h3>
+              <p>Application-oriented optical modules for metro aggregation, transport networks, and evolving carrier infrastructure with project-based sourcing flexibility.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
           <a href="solution-fiber-access.html" class="solution-card">
             <div class="card-visual card-visual-6"></div>
             <div class="card-content">
-              <h3>Fiber to the Home Access</h3>
-              <p>50G PON, 10G PON, NG-PON2, and GPON OLT technologies for FTTx deployments and broadband access.</p>
+              <h3>Broadband Access</h3>
+              <p>Optical connectivity options for access networks and broadband deployment scenarios, supporting the expansion of next-generation network access services.</p>
               <span class="card-link">Learn more</span>
             </div>
           </a>
@@ -148,53 +157,124 @@
       </div>
     </section>
 
-    <section id="news" class="news">
+    <!-- Products -->
+    <section id="products" class="solutions products-section">
       <div class="container">
-        <h2 class="section-title">Latest News</h2>
-        <p class="section-desc"><a href="news.html">See all news</a></p>
-        <div class="news-grid">
-          <a href="news.html#news-1" class="news-card">
-            <div class="news-img news-img-1"></div>
-            <div class="news-body">
-              <span class="news-date">2025</span>
-              <h4>ASTERON at CIOE 2025 — 1.6T and AI &amp; Cloud Portfolio</h4>
-              <p>Showcasing latest optical transceiver portfolio for AI &amp; Cloud Computing, FTTx/Wireless, Telecom, and DCI applications.</p>
-              <span class="news-link">Learn more</span>
+        <h2 class="section-title">Products</h2>
+        <p class="section-desc">ASTERON offers an application-oriented portfolio of optical interconnect products aligned with the needs of North American customers. Our product approach emphasizes interoperability, deployment fit, and flexible sourcing through qualified manufacturing and technology partners.</p>
+        <div class="solution-cards">
+          <a href="category-1-6t.html" class="solution-card">
+            <div class="card-visual product-card-visual-3"></div>
+            <div class="card-content">
+              <h3>1.6T Roadmap</h3>
+              <p>Roadmap-oriented optical pathways for customers preparing for next-generation interconnect requirements, subject to platform readiness and partner qualification status.</p>
+              <span class="card-link">View products</span>
             </div>
           </a>
-          <a href="news.html#news-2" class="news-card">
-            <div class="news-img news-img-2"></div>
-            <div class="news-body">
-              <span class="news-date">2025</span>
-              <h4>ASTERON Demonstrates 1.6T and 800G at OFC 2025</h4>
-              <p>Live demonstrations of 1.6T pluggable optical transceivers and next-generation low-power 800G solutions.</p>
-              <span class="news-link">Learn more</span>
+          <a href="category-800g-pluggables.html" class="solution-card">
+            <div class="card-visual product-card-visual-2"></div>
+            <div class="card-content">
+              <h3>800G Pluggables</h3>
+              <p>Next-generation pluggable solutions for advanced switching and AI-driven network environments where higher bandwidth density and future-ready infrastructure planning are essential.</p>
+              <span class="card-link">View products</span>
+            </div>
+          </a>
+          <a href="category-400g-pluggables.html" class="solution-card">
+            <div class="card-visual product-card-visual-1"></div>
+            <div class="card-content">
+              <h3>400G Pluggables</h3>
+              <p>Optical solutions for high-speed switching, data center fabrics, and bandwidth-intensive deployment scenarios requiring a balance of performance, power efficiency, and interoperability.</p>
+              <span class="card-link">View products</span>
+            </div>
+          </a>
+          <a href="category-coherent-zr.html" class="solution-card">
+            <div class="card-visual product-card-visual-4"></div>
+            <div class="card-content">
+              <h3>Coherent / ZR / ZR+</h3>
+              <p>Selected coherent-ready and longer-reach optical options for data center interconnect and transport-oriented applications, depending on project requirements and product availability.</p>
+              <span class="card-link">View products</span>
+            </div>
+          </a>
+          <a href="category-aoc-dac.html" class="solution-card">
+            <div class="card-visual product-card-visual-5"></div>
+            <div class="card-content">
+              <h3>AOC / DAC</h3>
+              <p>Direct interconnect options for short-reach connectivity scenarios where deployment efficiency, cabling simplicity, and system fit matter.</p>
+              <span class="card-link">View products</span>
+            </div>
+          </a>
+          <a href="category-access-optics.html" class="solution-card">
+            <div class="card-visual product-card-visual-6"></div>
+            <div class="card-content">
+              <h3>Access Optics</h3>
+              <p>Optical connectivity options for broadband and access-related deployment environments, aligned with practical service expansion needs.</p>
+              <span class="card-link">View products</span>
             </div>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- Why ASTERON -->
+    <section id="why-asteron" class="why-asteron">
+      <div class="container">
+        <h2 class="section-title">Why ASTERON</h2>
+        <div class="value-props">
+          <div class="value-prop">
+            <strong>North America Focus</strong>
+            <span>We are built around the needs of North American customers, with a business model designed for channel development, project-based support, and responsive commercial communication.</span>
+          </div>
+          <div class="value-prop">
+            <strong>Qualified Manufacturing Ecosystem</strong>
+            <span>ASTERON works with selected manufacturing and technology partners to support high-speed optical programs across multiple application environments.</span>
+          </div>
+          <div class="value-prop">
+            <strong>Branding and Supply Flexibility</strong>
+            <span>We support ASTERON-branded products, selected distribution programs, and private label opportunities depending on project requirements.</span>
+          </div>
+          <div class="value-prop">
+            <strong>Application-Driven Solutions</strong>
+            <span>Our portfolio is organized around real deployment scenarios—from AI clusters and DCI to metro networks and broadband access—rather than one-size-fits-all catalog selling.</span>
+          </div>
+        </div>
+        <a href="introduction.html" class="btn btn-secondary">About ASTERON</a>
+      </div>
+    </section>
+
+    <!-- Working with ASTERON -->
+    <section class="partner-ecosystem working-with-asteron">
+      <div class="container">
+        <h2 class="section-title">Working with ASTERON</h2>
+        <p class="section-desc">ASTERON supports multiple go-to-market models for North American customers and channel partners. Depending on the project, we can provide ASTERON-branded products, authorized distribution of selected solutions, private label support, and project-oriented sourcing aligned with customer requirements.</p>
+        <div class="working-modes">
+          <div class="working-mode-box">ASTERON Branded Products</div>
+          <div class="working-mode-box">Authorized Distribution</div>
+          <div class="working-mode-box">Private Label Support</div>
+          <div class="working-mode-box">Project-Based Sourcing</div>
+        </div>
+        <a href="partner-ecosystem.html" class="btn btn-secondary">Partner Ecosystem</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
+      </div>
+    </section>
+
+    <!-- Quality & Compliance -->
     <section class="esg">
       <div class="container esg-inner">
         <div class="esg-content">
-          <h2 class="esg-title">Sustainable Development</h2>
-          <p>We are committed to quality, safety, and compliance across our operations and supply chain. Our environmental and social governance practices support long-term value for stakeholders.</p>
-          <a href="quality-safety.html" class="btn btn-secondary">Quality &amp; Safety</a>
-          <a href="compliance.html" class="btn btn-secondary">Compliance Statement</a>
+          <h2 class="esg-title">Quality &amp; Compliance</h2>
+          <p>We work with partners who meet quality and compliance requirements relevant to our customers.</p>
+          <a href="quality-compliance.html" class="btn btn-secondary">Quality &amp; Compliance</a>
         </div>
         <div class="esg-visual"></div>
       </div>
     </section>
 
-    <section class="next-cta">
+    <!-- Closing CTA -->
+    <section class="next-cta closing-cta">
       <div class="container next-cta-inner">
-        <a href="solution-ai-clusters.html" class="next-link">Solutions</a>
-        <a href="index.html" class="next-link">Home</a>
-        <a href="contact.html" class="next-link next-contact">
-          <strong>Contact Us</strong><br />
-          Get in touch to learn more.
-        </a>
+        <h2 class="section-title">Let’s Build Your Optical Roadmap</h2>
+        <p class="section-desc">Whether you are evaluating optical modules for AI infrastructure, telecom networks, or channel distribution, ASTERON is ready to support your next project.</p>
+        <a href="contact.html" class="btn btn-primary">Talk to Sales</a>
       </div>
     </section>
   </main>
@@ -205,21 +285,21 @@
         <div class="footer-nav">
           <a href="index.html">Home</a>
           <a href="solution-ai-clusters.html">Solutions</a>
-          <a href="quality-safety.html">Sustainable Development</a>
+          <a href="quality-compliance.html">Quality &amp; Compliance</a>
           <a href="introduction.html">About ASTERON</a>
           <a href="contact.html">Contact Us</a>
         </div>
         <a href="index.html" class="footer-logo"><img src="images/ao-logo.png" alt="ASTERON" class="logo-img" /></a>
-        <p class="footer-copy">© ASTERON. All Rights Reserved. <a href="compliance.html">Compliance Statement</a></p>
+        <p class="footer-copy">© ASTERON. All Rights Reserved.</p>
       </div>
       <div class="footer-row footer-row-2">
         <div class="footer-nav">
-          <a href="solution-ai-clusters.html">AI Clusters | Data Centers</a>
-          <a href="solution-data-center-connectivity.html">Data Center Connectivity</a>
-          <a href="solution-storage-hpc.html">Storage | Server HPC</a>
-          <a href="solution-wireless-fronthaul.html">Wireless Fronthaul</a>
-          <a href="solution-metro-long-haul.html">Metro Long Haul</a>
-          <a href="solution-fiber-access.html">Fiber to the Home Access</a>
+          <a href="solution-ai-clusters.html">AI Infrastructure</a>
+          <a href="solution-data-center-connectivity.html">Cloud &amp; DCI</a>
+          <a href="solution-storage-hpc.html">Enterprise / HPC Storage</a>
+          <a href="solution-wireless-fronthaul.html">Mobile &amp; Fronthaul</a>
+          <a href="solution-metro-long-haul.html">Metro / Transport Networks</a>
+          <a href="solution-fiber-access.html">Broadband Access</a>
         </div>
         <p class="footer-copy">Copyright © ASTERON. All Rights Reserved.</p>
       </div>
@@ -244,31 +324,7 @@
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    (function() {
-      var slides = document.querySelectorAll('.carousel-slide');
-      var dots = document.querySelectorAll('.carousel-dot');
-      var total = slides.length;
-      if (total === 0) return;
-      var current = 0;
-      var timer = null;
-      function goTo(index) {
-        current = (index + total) % total;
-        slides.forEach(function(s, i) { s.classList.toggle('carousel-slide-active', i === current); });
-        dots.forEach(function(d, i) { d.classList.toggle('carousel-dot-active', i === current); });
-      }
-      function next() { goTo(current + 1); }
-      function startTimer() {
-        if (timer) clearInterval(timer);
-        timer = setInterval(next, 5000);
-      }
-      dots.forEach(function(dot, i) {
-        dot.addEventListener('click', function() { goTo(i); startTimer(); });
-      });
-      document.querySelector('.carousel-prev').addEventListener('click', function(e) { e.preventDefault(); goTo(current - 1); startTimer(); });
-      document.querySelector('.carousel-next').addEventListener('click', function(e) { e.preventDefault(); goTo(current + 1); startTimer(); });
-      startTimer();
-    })();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

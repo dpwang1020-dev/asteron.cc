@@ -1,0 +1,10 @@
+# Copy to .dev.vars for local development with Wrangler (npx wrangler pages dev).
+# Do not commit .dev.vars (add it to .gitignore).
+
+# Resend API key (create at https://resend.com/api-keys)
+RESEND_API_KEY=re_xxxxxxxxxxxx
+
+# Optional: From address for contact form emails. Must use a verified domain in Resend.
+# Default if unset: "ASTERON Website <onboarding@resend.dev>" (Resend sandbox).
+# Example for production: ASTERON Website <noreply@asteron.cc>
+# RESEND_FROM_EMAIL=ASTERON Website <noreply@yourdomain.com>
