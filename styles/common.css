@@ -105,7 +105,7 @@ main {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 235px;
   padding: 0.5rem 0;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -584,12 +584,42 @@ main {
 .solution-card:hover .card-link { text-decoration: underline; }
 
 /* Product category cards (home): same layout as solution-cards, gradient-only visuals */
-.product-card-visual-1 { background: linear-gradient(135deg, #0a1628 0%, #0d2847 50%, #0a1628 100%); }
-.product-card-visual-2 { background: linear-gradient(135deg, #0c1a1f 0%, #0d2830 50%, #0c1a1f 100%); }
-.product-card-visual-3 { background: linear-gradient(135deg, #1a0d28 0%, #1e1640 50%, #1a0d28 100%); }
-.product-card-visual-4 { background: linear-gradient(135deg, #0d1a0d 0%, #0d2814 50%, #0d1a0d 100%); }
-.product-card-visual-5 { background: linear-gradient(135deg, #1a1408 0%, #28200d 50%, #1a1408 100%); }
-.product-card-visual-6 { background: linear-gradient(135deg, #0d1428 0%, #141f33 50%, #0d1428 100%); }
+.product-card-visual-1 { background: linear-gradient(135deg, #0a1628 0%, #0d2847 50%, #0a1628 100%);
+  background-image: url('../images/product-banner1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card-visual-2 { background: linear-gradient(135deg, #0c1a1f 0%, #0d2830 50%, #0c1a1f 100%);
+  background-image: url('../images/product-banner2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card-visual-3 { background: linear-gradient(135deg, #1a0d28 0%, #1e1640 50%, #1a0d28 100%);
+  background-image: url('../images/product-banner3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card-visual-4 { background: linear-gradient(135deg, #0d1a0d 0%, #0d2814 50%, #0d1a0d 100%);
+  background-image: url('../images/product-banner4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card-visual-5 { background: linear-gradient(135deg, #1a1408 0%, #28200d 50%, #1a1408 100%);
+  background-image: url('../images/product-banner5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card-visual-6 { background: linear-gradient(135deg, #0d1428 0%, #141f33 50%, #0d1428 100%);
+  background-image: url('../images/product-banner6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* Product Family (solution sub-pages: list by family with image) */
 .product-family {
