@@ -820,6 +820,10 @@ main {
   height: 200px;
   background: linear-gradient(135deg, var(--accent-dim) 0%, transparent 60%);
   border-radius: var(--radius);
+  background-image: url('../images/compliance-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
   .esg-inner { grid-template-columns: 1fr; }
